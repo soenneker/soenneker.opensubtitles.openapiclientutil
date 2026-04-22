@@ -1,20 +1,19 @@
 using Soenneker.OpenSubtitles.OpenApiClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.OpenSubtitles.OpenApiClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class OpenSubtitlesOpenApiClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class OpenSubtitlesOpenApiClientUtilTests : HostedUnitTest
 {
     private readonly IOpenSubtitlesOpenApiClientUtil _openapiclientutil;
 
-    public OpenSubtitlesOpenApiClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public OpenSubtitlesOpenApiClientUtilTests(Host host) : base(host)
     {
         _openapiclientutil = Resolve<IOpenSubtitlesOpenApiClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
