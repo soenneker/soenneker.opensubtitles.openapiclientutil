@@ -11,6 +11,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.OpenSubtitles.OpenApiClientUtil;
 
+/// <inheritdoc cref="IOpenSubtitlesOpenApiClientUtil" />
 public sealed class OpenSubtitlesOpenApiClientUtil : IOpenSubtitlesOpenApiClientUtil
 {
     private readonly AsyncSingleton<OpenSubtitlesOpenApiClient> _client;
