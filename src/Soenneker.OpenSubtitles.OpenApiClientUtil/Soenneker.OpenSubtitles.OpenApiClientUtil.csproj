@@ -45,6 +45,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.OpenSubtitles.HttpClients" Version="11.0.157" />
-        <PackageReference Include="Soenneker.OpenSubtitles.OpenApiClient" Version="11.0.59" />
+        <PackageReference Include="Soenneker.OpenSubtitles.OpenApiClient" Version="11.0.61" />
     </ItemGroup>
 </Project>
